@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-800 text-white">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <h1 className="text-5xl font-bold mb-4">Welcome to My App</h1>
       <h2>Creative Developer & Designer</h2>
       <p className="text-lg mb-8">I help brands and startups create beautiful digital
