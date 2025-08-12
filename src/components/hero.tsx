@@ -1,41 +1,92 @@
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Btn from "./buttons/button";
 import { ImageWithFallback } from "./imageWithFallBack";
-import { FaDownload, FaArrowRight } from "react-icons/fa6";
-function Hero() {
-  const shape= "whatever works";
-  return (
-    <div className="flex min-h-screen flex-col h-3/4 items-between justify-start">
-      <h1 className="text-5xl font-bold mb-4">Welcome to My App</h1>
-      <h2>Creative Developer & Designer</h2>
-      <p className="text-lg mb-8">I help brands and startups create beautiful digital
-         experiences through thoughtful design and clean code.</p>
-      <span className="flex gap-4">
 
-        <Btn>
-          View My Work
-          <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2 inline-block ml-2 hover:mr-4" />
-        </Btn>
-        <Btn>
-          <FaDownload className="transition-transform duration-300 group-hover:translate-x-2 inline-block mr-2" />
-          Download CV
-        </Btn>              
-      </span>
-     <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1668752741330-8adc5cef7485?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNob3QlMjBhZnJpY2FufGVufDB8fDB8fHww"
-                  alt="Professional headshot"
-                  className="w-72 h-72 rounded-full object-cover border-4 border-background shadow-xl"
-                />
+export default function Hero() {
+  const stats = [
+    { value: "50+", label: "Projects Completed" },
+    { value: "10+", label: "Years of Experience" },
+    { value: "100%", label: "Client Satisfaction" },
+  ];
+
+  const socials = [
+    { icon: <FaGithub />, href: "https://github.com" },
+    { icon: <FaLinkedin />, href: "https://linkedin.com" },
+    { icon: <FaTwitter />, href: "https://twitter.com" },
+  ];
+
+  return (
+    <section
+      id="home"
+      aria-label="Hero section"
+      className="min-h-screen flex items-center justify-center pt-20"
+    >
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        {/* Text Content */}
+        <header>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Hi, I'm <span className="text-primary">David</span>
+          </h1>
+          <h2 className="text-lg md:text-xl text-muted-foreground mb-6">
+            Creative Developer & Designer
+          </h2>
+          <p className="text-base text-muted-foreground mb-8 max-w-md">
+            I craft beautiful and functional digital experiences. Let’s work
+            together to bring your ideas to life.
+          </p>
+
+          {/* Buttons */}
+          <nav className="flex gap-4 mb-10">
+            <Btn>Get in Touch</Btn>
+            <Btn>View Portfolio</Btn>
+          </nav>
+
+          {/* Stats */}
+          <div className="flex flex-wrap gap-8 mb-12">
+            {stats.map(({ value, label }) => (
+              <div key={label} className="text-center md:text-left">
+                <h3 className="text-2xl font-semibold">{value}</h3>
+                <p className="text-sm text-muted-foreground">{label}</p>
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground text-2xl">✨</span>
-              </div>
-            </div>
+            ))}
           </div>
-      
-    </div>
+
+          {/* Socials */}
+          <div className="flex gap-6 text-lg">
+            {socials.map(({ icon, href }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+        </header>
+
+        {/* Image */}
+        <figure className="relative flex justify-center">
+          <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center hover:scale-105 transition-transform duration-300">
+            <ImageWithFallback
+              src="/images/hero.jpg"
+              alt="Portrait of David, Creative Developer & Designer"
+              className="w-72 h-72 object-cover rounded-full border-4 border-white shadow-lg"
+            />
+            <figcaption className="sr-only">
+              Portrait of David, Creative Developer & Designer
+            </figcaption>
+          </div>
+
+          {/* Badge */}
+          <div className="absolute bottom-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full shadow-lg animate-pulse">
+            ✨ Available for work
+          </div>
+        </figure>
+      </div>
+    </section>
   );
 }
-export default Hero;
