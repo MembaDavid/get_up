@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         {/* Text Content */}
-        <header>
+        <header className="space-y-6 pl-5">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
             Hi, I'm <span className="text-primary">David</span>
           </h1>
