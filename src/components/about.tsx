@@ -37,17 +37,8 @@ const skills = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center py-20 px-6">
-      <h1 className="text-5xl font-extrabold mb-12 text-gray-900 text-center max-w-4xl">
-        About Me
-      </h1>
-
-      <p className="max-w-3xl text-center text-gray-700 text-lg mb-16 leading-relaxed">
-        As a passionate solo developer, I combine innovative AI research, agile
-        development, and a laser focus on security to build scalable,
-        future-proof solutions tailored for your unique business needs.
-      </p>
-
-       {/* My Story Section */}
+     
+      {/* My Story Section */}
       <section
         id="story"
         className="w-full max-w-7xl bg-indigo-100 rounded-lg shadow-md p-12 mb-20 text-center"
@@ -81,7 +72,7 @@ export default function AboutPage() {
               key={skill}
               className="bg-white rounded-lg shadow-md p-6 hover:scale-105 transition-transform duration-300 cursor-default"
             >
-              <p className="text-lg font-semibold text-gray-800">{skill}</p>
+              <p className="text-sm sm:text-lg font-semibold text-gray-800">{skill}</p>
             </div>
           ))}
         </div>
