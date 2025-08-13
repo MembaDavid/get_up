@@ -1,4 +1,5 @@
 // pages/blog.tsx
+import { link } from "fs";
 import React from "react";
 
 const posts = [
@@ -7,6 +8,7 @@ const posts = [
     title: "Harnessing AI for Next-Level Productivity",
     description: "Learn how AI can transform your workflow and make you unstoppable.",
     date: "August 13, 2025",
+    link: "/blog/blog1",
     image: "https://plus.unsplash.com/premium_photo-1676637656166-cb7b3a43b81a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aGFybmVzc2luZyUyMHRoZSUyMHBvd2VyJTIwb2YlMjBhaXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
@@ -14,6 +16,7 @@ const posts = [
     title: "Design Tips for Stunning UIs",
     description: "Create beautiful and functional user interfaces that wow your users.",
     date: "August 10, 2025",
+    link: "/blog/blog2",
     image: "https://plus.unsplash.com/premium_photo-1721269383376-36a79e1b9846?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvZnR3YXJlJTIwZGVzaWduJTIwdGlwc3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
@@ -21,6 +24,7 @@ const posts = [
     title: "The Future of Web Development",
     description: "Explore modern web technologies that will dominate the next decade.",
     date: "August 5, 2025",
+    link: "/blog/blog3",
     image: "https://plus.unsplash.com/premium_photo-1718198497330-08b58f749d4b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZ1dHVyZSUyMG9mJTIwd2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",
   },
 ];
@@ -50,9 +54,10 @@ const Blog = () => {
                   {post.title}
                 </h2>
                 <p className="text-gray-700">{post.description}</p>
+                <a href={post.link}>
                 <button className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                   Read More
-                </button>
+                </button></a>
               </div>
             </div>
           ))}
