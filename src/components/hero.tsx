@@ -4,14 +4,14 @@ import { ImageWithFallback } from "./imageWithFallBack";
 
 export default function Hero() {
   const stats = [
-    { value: "50+", label: "Projects Completed" },
-    { value: "10+", label: "Years of Experience" },
+    { value: "10+", label: "Projects Completed" },
+    { value: "2+", label: "Years of Experience" },
     { value: "100%", label: "Client Satisfaction" },
   ];
 
   const socials = [
-    { icon: <FaGithub />, href: "https://github.com" },
-    { icon: <FaLinkedin />, href: "https://linkedin.com" },
+    { icon: <FaGithub />, href: "https://github.com/MembaDavid" },
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/david-memba-927a34275/" },
     { icon: <FaTwitter />, href: "https://twitter.com" },
   ];
 
@@ -38,8 +38,12 @@ export default function Hero() {
 
           {/* Buttons */}
           <nav className="flex gap-4 mb-10">
-            <Btn>Get in Touch</Btn>
-            <Btn>View Portfolio</Btn>
+            <a href="https://wa.me/message/JJNS2WHLCLF2N1?src=qr ">
+              <Btn>Get in Touch</Btn>
+            </a>
+            <a href="/portfolio">
+              <Btn>View Portfolio</Btn>
+            </a>
           </nav>
 
           {/* Stats */}

@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
 import Btn from "./buttons/button";
 import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function ContactPage() {
   const socialLinks = [
@@ -9,6 +12,43 @@ export default function ContactPage() {
     { icon: <FaLinkedin />, href: "#", label: "LinkedIn" },
     { icon: <FaEnvelope />, href: "mailto:hello@getup.dev", label: "Email" },
   ];
+  const [form, setForm] = useState({ username: "", email: "", message: "",})
+  const [loading, setloading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({
+      ...form, [e.target.name]: e.target.value});
+  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setloading(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      const data = await response.json();
+      setStatus("Message sent successfully!");
+      setForm({ username: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("Error sending message. Please try again.");
+    } finally {
+      setloading(false);
+    }
+  };
+
+
 
   return (
     <main className="min-h-screen bg-gray-50 py-20 px-6 flex flex-col items-center">
@@ -22,14 +62,18 @@ export default function ContactPage() {
       </p>
 
       {/* Contact Form */}
-      <form className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8 flex flex-col gap-6">
+      <form className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8 flex flex-col gap-6"
+        onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <label htmlFor="name" className="text-gray-700 font-medium mb-2">
             Name
           </label>
           <input
             type="text"
-            id="name"
+            name="username"
+            value={form.username}
+            onChange={handleChange}
+            id="username"
             placeholder="Your Name"
             className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
@@ -42,6 +86,9 @@ export default function ContactPage() {
           <input
             type="email"
             id="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
             placeholder="you@example.com"
             className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
@@ -53,6 +100,9 @@ export default function ContactPage() {
           </label>
           <textarea
             id="message"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
             rows={5}
             placeholder="Your message..."
             className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"

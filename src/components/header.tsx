@@ -40,7 +40,8 @@ function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center transition-all duration-300">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+       <a href="/">
+           <div className="flex items-center space-x-2">
           <span
             className={`inline-flex items-center justify-center rounded-full bg-black text-white font-bold text-xl transition-all duration-300 ${
               scrolled ? "w-7 h-7" : "w-8 h-8"
@@ -56,6 +57,7 @@ function Header() {
             Get Up
           </span>
         </div>
+       </a>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
