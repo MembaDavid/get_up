@@ -10,7 +10,7 @@ export default function Hero() {
   ];
 
   const socials = [
-    { icon: <FaGithub />, href: "https://github.com/MembaDavid" },
+    { icon: <FaGithub />, href: "https://github.com/" },
     { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/david-memba-927a34275/" },
     { icon: <FaTwitter />, href: "https://twitter.com" },
   ];
