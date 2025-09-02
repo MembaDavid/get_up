@@ -3,28 +3,40 @@
 const projects = [
   {
     id: 1,
-    title: "Hymn Projection App",
+    title: "Surprise Your Loved One",
     description:
-      "A cross-platform app for worship sessions with projection capabilities.",
-    image: "https://images.unsplash.com/photo-1565562183660-62c4a72ab233?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGh5bW4lMjBwcm9qZWN0aW9uJTIwYXBwfGVufDB8fDB8fHww",
-    link: "#",
+      "A playful website designed to create random surprises, gifts, and heartfelt messages for loved ones.",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+    link: "https://get-up-six.vercel.app",
   },
   {
     id: 2,
-    title: "AI Music Composer",
+    title: "University Church Website",
     description:
-      "An AI model that learns a composer’s style and generates new music.",
-    image: "https://plus.unsplash.com/premium_photo-1703617663829-ac7430988118?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWklMjBtdXNpYyUyMGNvbXBvc2VyfGVufDB8fDB8fHww",
-    link: "#",
+      "A modern church website with announcements, giving options, alumni support, and student ministry features.",
+    image:
+      "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+    link: "https://mmarausda.vercel.app",
   },
   {
-    id: 3,
-    title: "Interactive Supermarket",
+    id: 4,
+    title: "Personal Portfolio",
     description:
-      "A 3D online shopping experience that feels like a real store.",
-    image: "https://images.unsplash.com/photo-1679954570743-fadc1f2953f4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJhY3RpdmUlMjBzdXBlcm1hcmtldHxlbnwwfHwwfHx8MA%3D%3D",
-    link: "#",
+      "A sleek personal portfolio website to showcase projects, skills, and achievements with modern design and animations.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+    link: "https://get-up-six.vercel.app",
   },
+  //   {
+  //   id: 3,
+  //   title: "Hymn App",
+  //   description:
+  //     "A multi-language hymn app with audio, notation, offline support, and projection for worship sessions.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
+  //   link: "#",
+  // },
 ];
 
 export default function Portfolio() {
@@ -32,9 +44,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="text-center py-16 px-4 animate-fade-in">
-        <h1 className="text-5xl font-extrabold text-gray-900">
-          My Portfolio
-        </h1>
+        <h1 className="text-5xl font-extrabold text-gray-900">My Portfolio</h1>
         <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
           Showcasing my projects, ideas, and the cool things I build with code
           and creativity.
