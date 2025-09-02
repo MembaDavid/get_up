@@ -8,7 +8,7 @@ const projects = [
       "A playful website designed to create random surprises, gifts, and heartfelt messages for loved ones.",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
-    link: "https://get-up-six.vercel.app",
+    link: "https://habibi-my-love.vercel.app",
   },
   {
     id: 2,
