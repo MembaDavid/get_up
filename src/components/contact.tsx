@@ -196,7 +196,11 @@ export default function ContactPage() {
             <p className="text-xs text-neutral-500 dark:text-neutral-400">
               I usually reply within 24–48 hours.
             </p>
-            <Btn type="submit" className="min-w-36" disabled={loading}>
+            <Btn
+              type="submit"
+              className="min-w-36 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-500 px-6 py-2.5 font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-indigo-600 hover:to-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={loading}
+            >
               {loading ? (
                 <span className="inline-flex items-center gap-2">
                   <Spinner /> Sending…
