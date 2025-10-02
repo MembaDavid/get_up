@@ -6,7 +6,7 @@ export default function BlogReadPage() {
         {/* Blog Cover Image */}
         <div className="w-full h-72 bg-gray-200">
           <img
-            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+            src="https://plus.unsplash.com/premium_photo-1675793714962-a2413250c490?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Blog cover"
             className="w-full h-full object-cover"
           />
