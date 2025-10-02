@@ -11,3 +11,5 @@ export default function BlogRead() {
     </div>
   );
 }
+const name = "Blog Read Page";
+console.log(name);
