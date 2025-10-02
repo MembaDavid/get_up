@@ -13,8 +13,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Davy's Blog and Profile",
-  description: "A personal blog and profile by Davy",
+  title: {
+    default: "NeoBoss Concepts | Innovative Tech, Design & Digital Solutions",
+    template: "%s | NeoBoss Concepts",
+  },
+  description:
+    "NeoBoss Concepts is a forward-thinking tech and design hub delivering creative solutions in software development, digital media, branding, and business innovation.",
+  keywords: [
+    "NeoBoss",
+    "NeoBoss Concepts",
+    "tech solutions",
+    "software development",
+    "branding",
+    "digital design",
+    "startup studio",
+    "Kenya",
+    "Africa",
+  ],
+  openGraph: {
+    title: "NeoBoss Concepts | Tech & Creative Hub",
+    description:
+      "Innovative software, branding, and digital solutions by NeoBoss Concepts.",
+    url: "https://neobossconcepts.com",
+    siteName: "NeoBoss Concepts",
+    images: [
+      {
+        url: "https://neobossconcepts.com/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NeoBoss Concepts Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NeoBoss Concepts | Tech & Creative Hub",
+    description:
+      "Innovative software, branding, and digital solutions by NeoBoss Concepts.",
+    images: ["https://neobossconcepts.com/preview.jpg"],
+  },
 };
 
 export default function RootLayout({
