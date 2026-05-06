@@ -28,6 +28,15 @@ const projects = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0",
     link: "https://get-up-six.vercel.app",
   },
+  {
+    id: 5,
+    title: "Charity Organization Website",
+    description:
+      "A responsive website built to support a charity organization, featuring clear content structure, improved user experience, and ongoing maintenance.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&auto=format&fit=crop&q=60",
+    link: "https://www.feedthesoul.org.uk/",
+  },
   //   {
   //   id: 3,
   //   title: "Hymn App",
